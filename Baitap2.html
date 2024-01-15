@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        .wrapper{
+            height: 800px;
+            width: 1089px;
+            background-color: aquamarine;
+        }
+        header{
+            position: relative;
+            height: 150px;
+            width: 1089px;
+            background-color: rgb(178, 178, 187);
+        }
+        
+        .menu {
+            display: flex;
+            background: rgb(12, 203, 89);
+            height: 50px;
+            align-items: center;
+        }
+        
+        .menu>li {
+            width: 15%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .menu>li>a,
+        .sub-menu>li>a {
+            color: rgb(7, 7, 7);
+            text-decoration: none;
+        }
+        
+        .menu>li:hover,
+        .sub-menu>li:hover {
+            background: rgb(6, 5, 5);
+        }
+        
+        .menu>li:hover>a,
+        .sub-menu>li:hover>a {
+            color: rgb(12, 203, 89);
+        }
+        
+        .menu>li:nth-child(3) {
+            position: relative;
+        }
+        
+        .sub-menu {
+            display: none;
+            width: 15%;
+            position: absolute;
+            top: 50px;
+            background: rgb(7, 194, 23);
+        }
+        
+        .sub-menu>li {
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sub-menu-1 {
+            width: 100%;
+        }
+        
+        .sub-menu-2 {
+            top: 70px;
+            width: 100%;
+            left: 100%;
+        }
+        
+        .sub-menu-3 {
+            top: 0;
+            width: 100%;
+            left: 100%;
+        }
+        
+        .menu>li:hover>.sub-menu {
+            display: block;
+        }
+        
+        .sub-menu>li:hover>.sub-menu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img src="C:\stt_227129221_DanhVuMinhQuang\img\Logo_IUH.png" alt=""srcset=""height="150px"width="1089px">
+        </header>
+    <nav>
+    <ul class="menu">
+        <li><a href="">Home</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Contact</a>
+            <ul class="sub-menu sub-menu-1">
+                <li><a href="">Viettel</a></li>
+                <li><a href="">Vinaphone<a></li>
+                <li><a href="">Mobiphone</a>
+                    <ul class="sub-menu sub-menu-2">
+                        <li><a href="">Internet</a>
+                            <ul class="sub-menu sub-menu-3">
+                                <li><a href="">ADSL</a></li>
+                                <li><a href="">Cáp quang</a></li>
+                                <li><a href="">Wifi CC</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">4G</a></li>
+                        <li><a href="">TV</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="">About</a></li>
+        <li><a href="">Help</a></li>
+    </ul>
+</body>
+
+</html>
